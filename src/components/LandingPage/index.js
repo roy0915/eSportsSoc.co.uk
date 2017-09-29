@@ -91,7 +91,28 @@ const Icon = styled.a`
 
 const Logo = styled.img`
   height: 60px;
-  margin: 0 10px;
+  margin: 5px 10px;
+`;
+
+const NavMenu = styled.div`
+  height: 40px;
+`;
+
+const NavItem = styled.a`
+  font-size: 15px;
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+
+  &:hover {
+    color: #67a0fc;
+  }
+`;
+
+const NavSeperator = styled.a`
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
 `;
 
 export default () => {
@@ -99,7 +120,7 @@ export default () => {
     <div>
       <Container>
         <Sponsors>
-          <SponsorTitle>Sponsored by...</SponsorTitle>
+          <SponsorTitle>Sponsored by: </SponsorTitle>
           <SponsorText>Vainglory</SponsorText>
           <Icon src={VaingloryIcon} title="Vainglory" href="https://www.vainglorygame.com/" />
           <SponsorText>The NUEL</SponsorText>
@@ -115,6 +136,15 @@ export default () => {
           <Title>
             Imperial<Logo src={ICLogo} />eSports
           </Title>
+          <NavMenu>
+            <NavItem href="#">About Us</NavItem>
+            <NavSeperator>|</NavSeperator>
+            <NavItem href="#">News</NavItem>
+            <NavSeperator>|</NavSeperator>
+            <NavItem href="#">Media</NavItem>
+            <NavSeperator>|</NavSeperator>
+            <NavItem href="#">Contact Us</NavItem>
+          </NavMenu>
           <Icons>
             <Icon
               src={LoLIcon}
